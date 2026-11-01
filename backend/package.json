@@ -1,0 +1,25 @@
+{
+  "name": "smart-todo-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "task": "node src/cli/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-openapi-validator": "^5.6.2",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.1.1",
+    "vitest": "^4.1.12"
+  }
+}

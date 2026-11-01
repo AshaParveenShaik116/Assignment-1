@@ -1,0 +1,295 @@
+openapi: 3.1.0
+info:
+  title: Smart Todo Task API
+  version: 1.0.0
+  description: Canonical contract for task operations. The API is unauthenticated for the single-user v1 workspace.
+servers:
+  - url: /api
+tags:
+  - name: Tasks
+    description: Create, find, update, and archive tasks.
+paths:
+  /tasks:
+    get:
+      operationId: listTasks
+      tags: [Tasks]
+      summary: List active tasks
+      description: Returns active tasks ordered by due date ascending, creation time descending, and identifier ascending. Supports optional filtering by task attributes or keyword.
+      parameters:
+        - name: status
+          in: query
+          description: Filter by lifecycle status.
+          schema:
+            $ref: '#/components/schemas/TaskStatus'
+        - name: priority
+          in: query
+          description: Filter by priority.
+          schema:
+            $ref: '#/components/schemas/TaskPriority'
+        - name: search
+          in: query
+          description: Case-insensitive substring search across title and description.
+          schema:
+            type: string
+            maxLength: 2000
+        - name: dueBefore
+          in: query
+          description: Return tasks due on or before this date.
+          schema:
+            type: string
+            format: date
+        - name: dueAfter
+          in: query
+          description: Return tasks due on or after this date.
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: Active task list.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalError'
+    post:
+      operationId: createTask
+      tags: [Tasks]
+      summary: Create a task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskInput'
+      responses:
+        '201':
+          description: Task created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '500':
+          $ref: '#/components/responses/InternalError'
+  /tasks/{id}:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    get:
+      operationId: getTask
+      tags: [Tasks]
+      summary: Get a task
+      responses:
+        '200':
+          description: Task details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalError'
+    put:
+      operationId: updateTask
+      tags: [Tasks]
+      summary: Replace editable task fields
+      description: All editable fields are required. The task identifier and creation timestamp are immutable.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskReplacement'
+      responses:
+        '200':
+          description: Task updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalError'
+    delete:
+      operationId: archiveTask
+      tags: [Tasks]
+      summary: Archive a task
+      description: Archives the task for audit purposes; archived tasks are excluded from active task reads and lists.
+      responses:
+        '204':
+          description: Task archived.
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalError'
+  /tasks/{id}/status:
+    parameters:
+      - $ref: '#/components/parameters/TaskId'
+    patch:
+      operationId: updateTaskStatus
+      tags: [Tasks]
+      summary: Update task status
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [status]
+              properties:
+                status:
+                  $ref: '#/components/schemas/TaskStatus'
+      responses:
+        '200':
+          description: Task status updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+        '400':
+          $ref: '#/components/responses/ValidationError'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalError'
+components:
+  parameters:
+    TaskId:
+      name: id
+      in: path
+      required: true
+      description: Task identifier.
+      schema:
+        type: string
+        pattern: '^[a-fA-F0-9]{24}$'
+  schemas:
+    TaskStatus:
+      type: string
+      enum: [pending, in_progress, completed]
+    TaskPriority:
+      type: string
+      enum: [low, medium, high]
+    TaskInput:
+      type: object
+      additionalProperties: false
+      required: [title]
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+          description: Must not be blank after trimming.
+        description:
+          type: string
+          maxLength: 2000
+        status:
+          $ref: '#/components/schemas/TaskStatus'
+          default: pending
+        priority:
+          $ref: '#/components/schemas/TaskPriority'
+          default: medium
+        dueDate:
+          type: string
+          format: date
+          description: ISO 8601 calendar date.
+    Task:
+      type: object
+      additionalProperties: false
+      required: [id, title, description, status, priority, dueDate, createdAt, updatedAt]
+      properties:
+        id:
+          type: string
+          pattern: '^[a-fA-F0-9]{24}$'
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+        description:
+          type: string
+          maxLength: 2000
+        status:
+          $ref: '#/components/schemas/TaskStatus'
+        priority:
+          $ref: '#/components/schemas/TaskPriority'
+        dueDate:
+          type: [string, 'null']
+          format: date
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    TaskReplacement:
+      type: object
+      additionalProperties: false
+      required: [title, description, status, priority, dueDate]
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 200
+          description: Must not be blank after trimming.
+        description:
+          type: string
+          maxLength: 2000
+        status:
+          $ref: '#/components/schemas/TaskStatus'
+        priority:
+          $ref: '#/components/schemas/TaskPriority'
+        dueDate:
+          type: [string, 'null']
+          format: date
+          description: ISO 8601 calendar date or null to clear the due date.
+    Error:
+      type: object
+      additionalProperties: false
+      required: [error]
+      properties:
+        error:
+          type: object
+          additionalProperties: false
+          required: [code, message]
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: array
+              items:
+                type: string
+  responses:
+    ValidationError:
+      description: Invalid request data or task identifier.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: Task does not exist or is not active.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    InternalError:
+      description: Unexpected server error.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
