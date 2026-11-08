@@ -1,4 +1,4 @@
-# Implementation Plan: Smart Todo & Task CLI/API
+# Implementation Plan: Student Exam Preparation Planner
 
 **Branch**: `001-task-cli-api` | **Date**: 2026-11-01 | **Spec**: [spec.md](./spec.md)
 
@@ -6,7 +6,7 @@
 
 ## Summary
 
-Build a task management product with a React + Vite frontend and a Node.js + Express REST API backed by MongoDB through Mongoose. The core feature allows users to create, list, search, update, and complete tasks, while keeping the frontend and backend behavior aligned to the same task model and validation rules. The solution is designed to satisfy the approved specification while staying compliant with the project constitution: quality-first delivery, evidence-driven validation, test-first confidence, secure code, and simple maintainable structure.
+Build a student exam-preparation planner with a React + Vite frontend and a Node.js + Express REST API backed by MongoDB through Mongoose. Students create subject-specific study plans with goals, scheduled dates, target or exam dates, and important notes. Browser, API, and CLI share consistent validation and persistence.
 
 ## Technical Context
 
@@ -14,7 +14,7 @@ Build a task management product with a React + Vite frontend and a Node.js + Exp
 
 **Primary Dependencies**: React, Vite, Express, MongoDB, Mongoose, CORS, dotenv, Express OpenAPI Validator, OpenAPI 3.1, Vitest, React Testing Library, Supertest
 
-**Storage**: MongoDB with Mongoose; task data stored as documents with status, priority, timestamps, and optional due dates
+**Storage**: MongoDB with Mongoose; study plans include subject, goals, notes, status, priority, study date, and optional exam/target date
 
 **Testing**: Vitest for frontend component tests; Vitest + Supertest for backend API integration tests; test fixtures for CRUD validation and error handling
 
@@ -26,7 +26,7 @@ Build a task management product with a React + Vite frontend and a Node.js + Exp
 
 **Constraints**: No authentication required for v1; single-user personal workspace; require explicit validation for invalid input and missing task references; keep user-facing errors concise and actionable
 
-**Scale/Scope**: Personal task management workspace; support dozens of tasks initially, scaling to roughly 1,000 tasks with inexpensive filtering and pagination
+**Scale/Scope**: Single-student exam planner; support dozens of study plans initially, scaling to roughly 1,000 plans with inexpensive filtering
 
 ## Constitution Check
 

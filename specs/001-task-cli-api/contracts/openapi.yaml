@@ -1,20 +1,20 @@
 openapi: 3.1.0
 info:
-  title: Smart Todo Task API
+  title: Student Exam Preparation API
   version: 1.0.0
-  description: Canonical contract for task operations. The API is unauthenticated for the single-user v1 workspace.
+  description: Canonical contract for student study plans. The API is unauthenticated for the single-user v1 workspace.
 servers:
   - url: /api
 tags:
-  - name: Tasks
-    description: Create, find, update, and archive tasks.
+  - name: Study plans
+    description: Create, find, update, and archive exam preparation plans.
 paths:
   /tasks:
     get:
       operationId: listTasks
-      tags: [Tasks]
-      summary: List active tasks
-      description: Returns active tasks ordered by due date ascending, creation time descending, and identifier ascending. Supports optional filtering by task attributes or keyword.
+      tags: [Study plans]
+      summary: List active study plans
+      description: Returns active study plans ordered by study date ascending, target date ascending, creation time descending, then identifier ascending. Missing dates sort before dated plans. Supports filtering by subject, status, priority, date, or keyword.
       parameters:
         - name: status
           in: query
@@ -26,27 +26,45 @@ paths:
           description: Filter by priority.
           schema:
             $ref: '#/components/schemas/TaskPriority'
+        - name: subject
+          in: query
+          description: Case-insensitive exact subject filter.
+          schema:
+            type: string
+            maxLength: 100
         - name: search
           in: query
-          description: Case-insensitive substring search across title and description.
+          description: Case-insensitive substring search across subject, title, topics, and important notes.
           schema:
             type: string
             maxLength: 2000
         - name: dueBefore
           in: query
-          description: Return tasks due on or before this date.
+          description: Return study plans with an exam or completion target on or before this date.
           schema:
             type: string
             format: date
         - name: dueAfter
           in: query
-          description: Return tasks due on or after this date.
+          description: Return study plans with an exam or completion target on or after this date.
+          schema:
+            type: string
+            format: date
+        - name: studyAfter
+          in: query
+          description: Return study plans scheduled on or after this date.
+          schema:
+            type: string
+            format: date
+        - name: studyBefore
+          in: query
+          description: Return study plans scheduled on or before this date.
           schema:
             type: string
             format: date
       responses:
         '200':
-          description: Active task list.
+          description: Active study plan list.
           content:
             application/json:
               schema:
@@ -59,8 +77,8 @@ paths:
           $ref: '#/components/responses/InternalError'
     post:
       operationId: createTask
-      tags: [Tasks]
-      summary: Create a task
+      tags: [Study plans]
+      summary: Create a study plan
       requestBody:
         required: true
         content:
@@ -69,7 +87,7 @@ paths:
               $ref: '#/components/schemas/TaskInput'
       responses:
         '201':
-          description: Task created.
+          description: Study plan created.
           content:
             application/json:
               schema:
@@ -83,11 +101,11 @@ paths:
       - $ref: '#/components/parameters/TaskId'
     get:
       operationId: getTask
-      tags: [Tasks]
-      summary: Get a task
+      tags: [Study plans]
+      summary: Get a study plan
       responses:
         '200':
-          description: Task details.
+          description: Study plan details.
           content:
             application/json:
               schema:
@@ -100,9 +118,9 @@ paths:
           $ref: '#/components/responses/InternalError'
     put:
       operationId: updateTask
-      tags: [Tasks]
-      summary: Replace editable task fields
-      description: All editable fields are required. The task identifier and creation timestamp are immutable.
+      tags: [Study plans]
+      summary: Replace editable study plan fields
+      description: All editable fields are required. The study plan identifier and creation timestamp are immutable.
       requestBody:
         required: true
         content:
@@ -111,7 +129,7 @@ paths:
               $ref: '#/components/schemas/TaskReplacement'
       responses:
         '200':
-          description: Task updated.
+          description: Study plan updated.
           content:
             application/json:
               schema:
@@ -124,12 +142,12 @@ paths:
           $ref: '#/components/responses/InternalError'
     delete:
       operationId: archiveTask
-      tags: [Tasks]
-      summary: Archive a task
-      description: Archives the task for audit purposes; archived tasks are excluded from active task reads and lists.
+      tags: [Study plans]
+      summary: Archive a study plan
+      description: Archives the study plan for audit purposes; archived plans are excluded from active reads and lists.
       responses:
         '204':
-          description: Task archived.
+          description: Study plan archived.
         '400':
           $ref: '#/components/responses/ValidationError'
         '404':
@@ -141,8 +159,8 @@ paths:
       - $ref: '#/components/parameters/TaskId'
     patch:
       operationId: updateTaskStatus
-      tags: [Tasks]
-      summary: Update task status
+      tags: [Study plans]
+      summary: Update study plan status
       requestBody:
         required: true
         content:
@@ -156,7 +174,7 @@ paths:
                   $ref: '#/components/schemas/TaskStatus'
       responses:
         '200':
-          description: Task status updated.
+          description: Study plan status updated.
           content:
             application/json:
               schema:
@@ -173,7 +191,7 @@ components:
       name: id
       in: path
       required: true
-      description: Task identifier.
+      description: Study plan identifier.
       schema:
         type: string
         pattern: '^[a-fA-F0-9]{24}$'
@@ -189,6 +207,12 @@ components:
       additionalProperties: false
       required: [title]
       properties:
+        subject:
+          type: string
+          minLength: 1
+          maxLength: 100
+          default: General
+          description: Student's subject. Defaults to General for existing API clients.
         title:
           type: string
           minLength: 1
@@ -197,6 +221,11 @@ components:
         description:
           type: string
           maxLength: 2000
+          description: Topics, chapters, or study materials to cover.
+        importantNotes:
+          type: string
+          maxLength: 2000
+          description: Important reminders or notes for this study plan.
         status:
           $ref: '#/components/schemas/TaskStatus'
           default: pending
@@ -206,15 +235,23 @@ components:
         dueDate:
           type: string
           format: date
-          description: ISO 8601 calendar date.
+          description: ISO calendar date for the exam or target completion date.
+        studyDate:
+          type: [string, 'null']
+          format: date
+          description: ISO calendar date when the student plans to study.
     Task:
       type: object
       additionalProperties: false
-      required: [id, title, description, status, priority, dueDate, createdAt, updatedAt]
+      required: [id, subject, title, description, importantNotes, status, priority, dueDate, studyDate, createdAt, updatedAt]
       properties:
         id:
           type: string
           pattern: '^[a-fA-F0-9]{24}$'
+        subject:
+          type: string
+          minLength: 1
+          maxLength: 100
         title:
           type: string
           minLength: 1
@@ -222,11 +259,17 @@ components:
         description:
           type: string
           maxLength: 2000
+        importantNotes:
+          type: string
+          maxLength: 2000
         status:
           $ref: '#/components/schemas/TaskStatus'
         priority:
           $ref: '#/components/schemas/TaskPriority'
         dueDate:
+          type: [string, 'null']
+          format: date
+        studyDate:
           type: [string, 'null']
           format: date
         createdAt:
@@ -238,14 +281,21 @@ components:
     TaskReplacement:
       type: object
       additionalProperties: false
-      required: [title, description, status, priority, dueDate]
+      required: [subject, title, description, importantNotes, status, priority, dueDate, studyDate]
       properties:
+        subject:
+          type: string
+          minLength: 1
+          maxLength: 100
         title:
           type: string
           minLength: 1
           maxLength: 200
           description: Must not be blank after trimming.
         description:
+          type: string
+          maxLength: 2000
+        importantNotes:
           type: string
           maxLength: 2000
         status:
@@ -256,6 +306,10 @@ components:
           type: [string, 'null']
           format: date
           description: ISO 8601 calendar date or null to clear the due date.
+        studyDate:
+          type: [string, 'null']
+          format: date
+          description: ISO calendar date or null to clear the scheduled study date.
     Error:
       type: object
       additionalProperties: false
@@ -276,13 +330,13 @@ components:
                 type: string
   responses:
     ValidationError:
-      description: Invalid request data or task identifier.
+      description: Invalid request data or study plan identifier.
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
     NotFound:
-      description: Task does not exist or is not active.
+      description: Study plan does not exist or is not active.
       content:
         application/json:
           schema:

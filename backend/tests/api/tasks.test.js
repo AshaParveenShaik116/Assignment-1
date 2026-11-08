@@ -11,11 +11,22 @@ describe('Task API', () => {
   it('creates and reads a task using the OpenAPI contract shape', async () => {
     const create = await request(app)
       .post('/api/tasks')
-      .send({ title: 'Plan release', description: 'Coordinate tasks', dueDate: '2026-11-10' });
+      .send({
+        subject: 'AI SDLC',
+        title: 'Tokenize the dataset',
+        description: 'Read class 3 and 4',
+        importantNotes: 'Review the assignment',
+        studyDate: '2026-11-08',
+        dueDate: '2026-11-10',
+      });
 
     expect(create.status).toBe(201);
     expect(create.body).toMatchObject({
-      title: 'Plan release',
+      subject: 'AI SDLC',
+      title: 'Tokenize the dataset',
+      studyDate: '2026-11-08',
+      dueDate: '2026-11-10',
+      importantNotes: 'Review the assignment',
       status: 'pending',
       priority: 'medium',
     });
@@ -40,14 +51,22 @@ describe('Task API', () => {
   it('updates task fields and status', async () => {
     const created = await request(app).post('/api/tasks').send({ title: 'Draft plan' });
     const update = await request(app).put(`/api/tasks/${created.body.id}`).send({
+      subject: 'Physics',
       title: 'Final plan',
       description: 'Reviewed',
+      importantNotes: 'Use the formula sheet',
       status: 'pending',
       priority: 'high',
       dueDate: null,
+      studyDate: '2026-11-12',
     });
     expect(update.status).toBe(200);
     expect(update.body.title).toBe('Final plan');
+    expect(update.body).toMatchObject({
+      subject: 'Physics',
+      importantNotes: 'Use the formula sheet',
+      studyDate: '2026-11-12',
+    });
 
     const status = await request(app)
       .patch(`/api/tasks/${created.body.id}/status`)
@@ -101,6 +120,31 @@ describe('Task API', () => {
 
     const search = await request(app).get('/api/tasks?search=design');
     expect(search.body.map((task) => task.title)).toEqual(['Grocery list', 'Release checklist']);
+  });
+
+  it('filters by subject and study date and searches important notes', async () => {
+    await request(app).post('/api/tasks').send({
+      subject: 'Biology',
+      title: 'Revise cells',
+      studyDate: '2026-11-08',
+      importantNotes: 'Bring the revision sheet',
+    });
+    await request(app).post('/api/tasks').send({
+      subject: 'History',
+      title: 'Review dates',
+      studyDate: '2026-11-09',
+    });
+
+    const response = await request(app)
+      .get('/api/tasks?subject=biology&studyAfter=2026-11-08&studyBefore=2026-11-08&search=revision');
+
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveLength(1);
+    expect(response.body[0]).toMatchObject({
+      subject: 'Biology',
+      studyDate: '2026-11-08',
+      importantNotes: 'Bring the revision sheet',
+    });
   });
 
   it('orders undated tasks first, then due date, creation time, and identifier', async () => {

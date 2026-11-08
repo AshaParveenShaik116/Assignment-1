@@ -1,8 +1,9 @@
-# Task API Contract
+# Student Study Plan API Contract
 
 The canonical machine-readable API contract is [openapi.yaml](./openapi.yaml)
-(OpenAPI 3.1.0). Endpoint implementation and contract tests must conform to that
-document; update it whenever request or response behavior changes.
+(OpenAPI 3.1.0). Endpoint implementation and contract tests must conform to that document; update it
+whenever request or response behavior changes. The existing `/tasks` path is kept for API
+compatibility; each task resource represents a student study plan.
 
 ## Base URL
 
@@ -32,18 +33,19 @@ document; update it whenever request or response behavior changes.
 
 ### GET /api/tasks
 
-Returns all active tasks in deterministic order, optionally filtered by status,
-priority, due date, or keyword.
+Returns all active study plans in deterministic order, optionally filtered by subject,
+status, priority, scheduled study date, target date, or keyword.
 
 Query parameters:
 - `status` (`pending`, `in_progress`, `completed`)
 - `priority` (`low`, `medium`, `high`)
-- `search` (case-insensitive substring match against title or description)
-- `dueBefore` (ISO date, inclusive upper bound)
-- `dueAfter` (ISO date, inclusive lower bound)
+- `subject` (case-insensitive exact match)
+- `search` (case-insensitive substring match against subject, title, topics, or important notes)
+- `studyAfter` / `studyBefore` (inclusive scheduled-study date bounds)
+- `dueBefore` / `dueAfter` (inclusive exam or target date bounds)
 
-Results are ordered by due date ascending, creation time descending, then task identifier
-ascending. Tasks without a due date are ordered before dated tasks.
+Results are ordered by study date, target date, creation time descending, then identifier
+ascending. Plans without a study date or target date are ordered before dated plans.
 
 Example response:
 
@@ -51,10 +53,13 @@ Example response:
 [
   {
     "id": "64f4d1c7f98a2e0c2b3a9c2a",
-    "title": "Prepare sprint review",
-    "description": "Review blockers and share open risks",
+    "subject": "Biology",
+    "title": "Revise cell structure",
+    "description": "Read chapters 3 and 4",
+    "importantNotes": "Bring flashcards",
     "status": "in_progress",
     "priority": "high",
+    "studyDate": "2026-11-08",
     "dueDate": "2026-11-10",
     "createdAt": "2026-11-01T09:00:00.000Z",
     "updatedAt": "2026-11-01T10:15:00.000Z"
@@ -64,16 +69,20 @@ Example response:
 
 ### POST /api/tasks
 
-Creates a new task.
+Creates a new study plan. `subject` defaults to `General` for compatibility with existing
+API clients.
 
 Request body:
 
 ```json
 {
-  "title": "Prepare sprint review",
-  "description": "Review blockers and share open risks",
+  "subject": "Biology",
+  "title": "Revise cell structure",
+  "description": "Read chapters 3 and 4",
+  "importantNotes": "Bring flashcards",
   "status": "pending",
   "priority": "high",
+  "studyDate": "2026-11-08",
   "dueDate": "2026-11-10"
 }
 ```
@@ -86,9 +95,9 @@ Returns a single task by identifier.
 
 ### PUT /api/tasks/:id
 
-Replaces the editable task fields. The request must include `title`, `description`,
-`status`, `priority`, and `dueDate` (use `null` to clear the due date); the task ID and
-creation timestamp are immutable.
+Replaces the editable study-plan fields. The request must include `subject`, `title`,
+`description`, `importantNotes`, `status`, `priority`, `studyDate`, and `dueDate` (use
+`null` to clear an optional date); the plan ID and creation timestamp are immutable.
 
 ### PATCH /api/tasks/:id/status
 
@@ -111,6 +120,6 @@ from active task reads and lists.
 
 The React frontend must:
 - use the task API for all list, create, update, and delete flows;
-- render validation and server errors clearly in the task form and task list;
-- keep the task model consistent with the API response shape; and
-- support filtering by status and priority without duplicating the task records or changing the data model.
+- render validation and server errors clearly in the study-plan form and list;
+- keep the study-plan model consistent with the API response shape; and
+- support filtering by subject, status, priority, and date without duplicating plan records.

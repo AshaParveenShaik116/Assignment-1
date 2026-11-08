@@ -20,10 +20,47 @@ describe('task CLI commands', () => {
     expect(output).toHaveBeenCalledWith(expect.stringContaining('"id": "task-1"'));
   });
 
+  it('accepts subject, study date, target date, and important notes', async () => {
+    const api = createApi();
+
+    await runCommand([
+      'add',
+      'Revise cells',
+      '--subject',
+      'Biology',
+      '--study-date',
+      '2026-11-08',
+      '--due-date',
+      '2026-11-10',
+      '--notes',
+      'Bring flashcards',
+    ], api, vi.fn());
+
+    expect(api.create).toHaveBeenCalledWith({
+      title: 'Revise cells',
+      subject: 'Biology',
+      studyDate: '2026-11-08',
+      dueDate: '2026-11-10',
+      importantNotes: 'Bring flashcards',
+    });
+  });
+
   it('lists tasks with filters', async () => {
     const api = createApi();
-    await runCommand(['list', '--status', 'pending'], api, vi.fn());
-    expect(api.list).toHaveBeenCalledWith({ status: 'pending' });
+    await runCommand([
+      'list',
+      '--status',
+      'pending',
+      '--subject',
+      'Biology',
+      '--study-after',
+      '2026-11-08',
+    ], api, vi.fn());
+    expect(api.list).toHaveBeenCalledWith({
+      status: 'pending',
+      subject: 'Biology',
+      studyAfter: '2026-11-08',
+    });
   });
 
   it('updates, completes, and archives tasks', async () => {

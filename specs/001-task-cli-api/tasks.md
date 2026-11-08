@@ -1,9 +1,9 @@
 ---
 
-description: "Task list for Smart Todo & Task CLI/API"
+description: "Task list for Student Exam Preparation Planner"
 ---
 
-# Tasks: Smart Todo & Task CLI/API
+# Tasks: Student Exam Preparation Planner
 
 **Input**: Design documents from `/specs/001-task-cli-api/`
 
@@ -166,3 +166,13 @@ After T001-T007:
 - The feature specification requires a CLI, although the current plan's source tree omits one; US3 adds the CLI under `backend/src/cli/` and shares the REST API.
 - The plan lists JavaScript/TypeScript as alternatives; tasks use JavaScript to match the existing CommonJS Node.js project and avoid a mixed-language setup.
 - The data model requires a `userId` owner reference while the plan defers authentication; the initial implementation must treat this as a single-user workspace and must not imply multi-user authorization.
+
+## Phase 7: Student Exam Preparation Planner Adaptation
+
+**Purpose**: Replace generic task-management language and fields with subject-based study planning while retaining API compatibility.
+
+- [X] T028 Extend the persisted study-plan model and OpenAPI contract with subject, scheduled study date, and important notes while retaining legacy `/api/tasks` routes.
+- [X] T029 Add subject/date filtering and study-date-first ordering, including today and upcoming schedule views.
+- [X] T030 Update the browser experience to collect subjects, study goals, topics, study dates, target dates, and important notes; show these on each plan.
+- [X] T031 Update CLI examples and feature documentation for student exam preparation.
+- [X] T032 Add automated coverage for study-plan validation, API fields and filters, CLI options, and frontend display; pass backend and frontend suites and the production build.

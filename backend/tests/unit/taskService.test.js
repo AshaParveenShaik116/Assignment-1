@@ -19,16 +19,24 @@ describe('taskService', () => {
     const created = await taskService.createTask({ title: 'Draft plan' });
     const updated = await taskService.updateTask(created.id, {
       title: 'Final plan',
+      subject: 'History',
       description: 'Review with the team',
+      importantNotes: 'Bring the review sheet',
       status: 'in_progress',
       priority: 'high',
+      studyDate: '2026-11-08',
+      dueDate: '2026-11-10',
     });
 
     expect(updated).toMatchObject({
       title: 'Final plan',
+      subject: 'History',
       description: 'Review with the team',
+      importantNotes: 'Bring the review sheet',
       status: 'in_progress',
       priority: 'high',
+      studyDate: '2026-11-08',
+      dueDate: '2026-11-10',
     });
     expect(await Task.countDocuments()).toBe(1);
   });
@@ -53,5 +61,33 @@ describe('taskService', () => {
 
     expect(results).toHaveLength(1);
     expect(results[0].title).toBe('Gamma');
+  });
+
+  it('filters by subject and scheduled study date and searches important notes', async () => {
+    await taskService.createTask({
+      subject: 'Biology',
+      title: 'Revise cells',
+      studyDate: '2026-11-08',
+      importantNotes: 'Review the labeled diagram',
+    });
+    await taskService.createTask({
+      subject: 'History',
+      title: 'Review dates',
+      studyDate: '2026-11-09',
+    });
+
+    const results = await taskService.listTasks({
+      subject: 'biology',
+      studyAfter: '2026-11-08',
+      studyBefore: '2026-11-08',
+      search: 'labeled diagram',
+    });
+
+    expect(results).toHaveLength(1);
+    expect(results[0]).toMatchObject({
+      subject: 'Biology',
+      studyDate: '2026-11-08',
+      importantNotes: 'Review the labeled diagram',
+    });
   });
 });

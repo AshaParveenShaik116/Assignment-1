@@ -18,14 +18,24 @@ export default function Filters({ value = {}, onChange }) {
 
   return (
     <fieldset className="filters">
-      <legend className="visually-hidden">Find tasks</legend>
+      <legend className="visually-hidden">Find study plans</legend>
       <label className="search-field">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
-        <span className="visually-hidden">Search tasks</span>
+        <span className="visually-hidden">Search study plans</span>
         <input
-          placeholder="Search your tasks..."
+          placeholder="Search subjects or notes..."
           value={filters.search ?? ''}
           onChange={(event) => change('search', event.target.value)}
+        />
+      </label>
+      <label className="filter-field">
+        Subject
+        <input
+          aria-label="Filter by subject"
+          maxLength={100}
+          placeholder="Any subject"
+          value={filters.subject ?? ''}
+          onChange={(event) => change('subject', event.target.value)}
         />
       </label>
       <label className="filter-field">
@@ -53,7 +63,7 @@ export default function Filters({ value = {}, onChange }) {
         </select>
       </label>
       <label className="filter-field filter-date">
-        Due before
+        Target before
         <input
           type="date"
           value={filters.dueBefore ?? ''}
@@ -61,7 +71,7 @@ export default function Filters({ value = {}, onChange }) {
         />
       </label>
       <label className="filter-field filter-date">
-        Due after
+        Target after
         <input
           type="date"
           value={filters.dueAfter ?? ''}
