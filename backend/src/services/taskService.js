@@ -10,11 +10,14 @@ function toTaskDto(task) {
   const value = typeof task.toObject === 'function' ? task.toObject() : task;
   return {
     id: value._id.toString(),
+    subject: value.subject || 'General',
     title: value.title,
     description: value.description,
+    importantNotes: value.importantNotes ?? '',
     status: value.status,
     priority: value.priority,
     dueDate: value.dueDate ? new Date(value.dueDate).toISOString().slice(0, 10) : null,
+    studyDate: value.studyDate ? new Date(value.studyDate).toISOString().slice(0, 10) : null,
     createdAt: new Date(value.createdAt).toISOString(),
     updatedAt: new Date(value.updatedAt).toISOString(),
   };
@@ -43,9 +46,21 @@ async function listTasks(filters = {}) {
   const query = { archivedAt: null };
   if (filters.status) query.status = filters.status;
   if (filters.priority) query.priority = filters.priority;
+  if (filters.subject) query.subject = new RegExp(`^${escapeRegex(filters.subject)}$`, 'i');
   if (filters.search) {
     const search = new RegExp(escapeRegex(filters.search), 'i');
-    query.$or = [{ title: search }, { description: search }];
+    query.$or = [
+      { subject: search },
+      { title: search },
+      { description: search },
+      { importantNotes: search },
+    ];
+  }
+
+  if (filters.studyAfter || filters.studyBefore) {
+    query.studyDate = {};
+    if (filters.studyAfter) query.studyDate.$gte = new Date(`${filters.studyAfter}T00:00:00.000Z`);
+    if (filters.studyBefore) query.studyDate.$lte = new Date(`${filters.studyBefore}T00:00:00.000Z`);
   }
 
   if (filters.dueAfter || filters.dueBefore) {
@@ -54,7 +69,9 @@ async function listTasks(filters = {}) {
     if (filters.dueBefore) query.dueDate.$lte = new Date(`${filters.dueBefore}T00:00:00.000Z`);
   }
 
-  const tasks = await Task.find(query).sort({ dueDate: 1, createdAt: -1, _id: 1 }).exec();
+  const tasks = await Task.find(query)
+    .sort({ studyDate: 1, dueDate: 1, createdAt: -1, _id: 1 })
+    .exec();
   return tasks.map(toTaskDto);
 }
 

@@ -1,8 +1,13 @@
 const JSON_FIELDS = {
+  subject: 'subject',
   title: 'title',
   description: 'description',
+  notes: 'importantNotes',
   status: 'status',
   priority: 'priority',
+  'study-date': 'studyDate',
+  'study-after': 'studyAfter',
+  'study-before': 'studyBefore',
   'due-date': 'dueDate',
 };
 
@@ -54,11 +59,11 @@ async function runCommand(args, apiClient, output = console.log) {
     case 'archive':
       if (!first) throw new Error('Usage: task archive <id>');
       await apiClient.archive(first);
-      output(`Archived task ${first}`);
+      output(`Archived study plan ${first}`);
       return;
     case 'help':
     case undefined:
-      output('Usage: task <add|list|show|update|complete|archive> ...');
+      output('Usage: task <add|list|show|update|complete|archive> ... (study plans)');
       return;
     default:
       throw new Error(`Unknown command: ${command}. Run "task help" for usage.`);

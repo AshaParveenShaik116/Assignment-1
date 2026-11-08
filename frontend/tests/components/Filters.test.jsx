@@ -7,16 +7,20 @@ describe('Filters', () => {
     const onChange = vi.fn();
     render(<Filters value={{}} onChange={onChange} />);
 
-    fireEvent.change(screen.getByLabelText(/search tasks/i), {
+    fireEvent.change(screen.getByLabelText(/search study plans/i), {
       target: { value: 'release' },
     });
     fireEvent.change(screen.getByLabelText(/status/i), {
       target: { value: 'completed' },
     });
+    fireEvent.change(screen.getByLabelText(/filter by subject/i), {
+      target: { value: 'Biology' },
+    });
 
     expect(onChange).toHaveBeenLastCalledWith(expect.objectContaining({
       search: 'release',
       status: 'completed',
+      subject: 'Biology',
     }));
   });
 
@@ -24,7 +28,13 @@ describe('Filters', () => {
     const onChange = vi.fn();
     render(
       <Filters
-        value={{ search: 'release', status: 'completed', priority: 'high', dueBefore: '2026-11-10' }}
+        value={{
+          search: 'release',
+          subject: 'Biology',
+          status: 'completed',
+          priority: 'high',
+          dueBefore: '2026-11-10',
+        }}
         onChange={onChange}
       />,
     );
@@ -32,9 +42,10 @@ describe('Filters', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }));
 
     expect(onChange).toHaveBeenCalledWith({});
-    expect(screen.getByLabelText(/search tasks/i)).toHaveValue('');
+    expect(screen.getByLabelText(/search study plans/i)).toHaveValue('');
+    expect(screen.getByLabelText(/filter by subject/i)).toHaveValue('');
     expect(screen.getByLabelText(/status filter/i)).toHaveValue('');
     expect(screen.getByLabelText(/priority filter/i)).toHaveValue('');
-    expect(screen.getByLabelText(/due before/i)).toHaveValue('');
+    expect(screen.getByLabelText(/target before/i)).toHaveValue('');
   });
 });

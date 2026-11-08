@@ -1,0 +1,14 @@
+{
+  "name": "natural-language-reminder-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "eval": "node src/evalRunner.js",
+    "harness": "node .harness/run.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

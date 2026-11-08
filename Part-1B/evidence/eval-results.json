@@ -1,0 +1,5926 @@
+{
+  "runs": [
+    {
+      "runId": "3c04e569-59c3-46b5-afb3-06b276decb34",
+      "startedAt": "2026-11-08T13:35:03.835Z",
+      "completedAt": "2026-11-08T13:35:05.013Z",
+      "status": "provider_error",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [],
+      "metrics": null,
+      "error": {
+        "category": "provider_error",
+        "message": "AI provider returned HTTP 429: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "status": 429
+      }
+    },
+    {
+      "runId": "9279fc0f-f2cc-4486-b37a-c6b3f59288c6",
+      "startedAt": "2026-11-08T13:57:43.588Z",
+      "completedAt": "2026-11-08T13:57:46.487Z",
+      "status": "provider_error",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [],
+      "metrics": null,
+      "error": {
+        "category": "provider_error",
+        "message": "AI provider returned HTTP 429: You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.",
+        "status": 429
+      }
+    },
+    {
+      "runId": "3b93c8f2-7b5f-4b80-ae52-db22ab2e55d3",
+      "startedAt": "2026-11-08T14:17:27.887Z",
+      "completedAt": "2026-11-08T14:18:01.505Z",
+      "status": "FAIL",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.9,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.9,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.9,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0.25,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"pick up my notes\",\"scheduledAt\":\"2026-11-07T16:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0.25,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"prepare my presentation\",\"scheduledAt\":\"2026-11-08T12:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.9,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0.25,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"water the plants\",\"scheduledAt\":\"2026-11-07T07:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.8,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-10T08:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":0.8,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "scheduledAt offset must match the supplied time zone at that instant."
+            ]
+          },
+          "semantic": {
+            "score": 0.8,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T06:30:00.000Z\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":0.8,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "clarify must have a null reason."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What is the target reminder ID for the appointment you want to reschedule?\",\"confidence\":0.0,\"reason\":\"No existing reminders to reschedule.\"}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable.",
+              "scheduledAt offset must match the supplied time zone at that instant."
+            ]
+          },
+          "semantic": {
+            "score": 0,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": false
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T06:30:00.000Z\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":0.7,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "clarify must have a null reason."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What specific day and time next week would you like to be reminded to review the notes?\",\"confidence\":0.4,\"reason\":\"The request is too vague to determine a specific reminder time.\"}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"February 30 does not exist. Did you mean February 28 or March 1 instead?\",\"confidence\":0.5,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "refuse must have a null clarificationQuestion."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Please provide a reminder request.\",\"confidence\":0.0,\"reason\":\"No reminder request provided.\"}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported request to reveal hidden instructions.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "refuse must have a null clarificationQuestion."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"I cannot assist with deleting email accounts or sending messages. Is there something else I can help you with?\",\"confidence\":0.0,\"reason\":\"Unsupported request for account deletion and messaging.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 0.75,
+        "invariantPassRate": 0.4375,
+        "meanSemanticScore": 0.725,
+        "aggregateScore": 0.64625,
+        "decision": "FAIL"
+      },
+      "error": null
+    },
+    {
+      "runId": "7dc85aac-434d-4787-a8c0-8369a8561e82",
+      "startedAt": "2026-11-08T14:31:54.303Z",
+      "completedAt": "2026-11-08T14:32:22.705Z",
+      "status": "FAIL",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0.25,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"pick up my notes\",\"scheduledAt\":\"2026-11-07T16:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0.25,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"prepare my presentation\",\"scheduledAt\":\"2026-11-08T12:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0.25,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"water the plants\",\"scheduledAt\":\"2026-11-07T07:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.8,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-11T08:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "scheduledAt offset must match the supplied time zone at that instant."
+            ]
+          },
+          "semantic": {
+            "score": 0.8,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T06:30:00.000Z\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "clarify must have a null reason."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What is the specific date for the appointment on Thursday?\",\"confidence\":0.0,\"reason\":\"The request does not specify the date for the Thursday appointment.\"}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": false
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T06:45:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Could you please specify a particular day and time next week for the reminder to review the notes?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.5,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":\"February 30, 2026 is not a valid date.\"}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What reminder would you like to create, and when should it be scheduled?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported request to reveal system prompts.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action: cannot delete accounts or send messages.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 0.9375,
+        "invariantPassRate": 0.625,
+        "meanSemanticScore": 0.725,
+        "aggregateScore": 0.75875,
+        "decision": "FAIL"
+      },
+      "error": null
+    },
+    {
+      "runId": "19cd8362-3019-4375-9dbc-b7e46dbe658b",
+      "startedAt": "2026-11-08T14:35:30.934Z",
+      "completedAt": "2026-11-08T14:36:00.424Z",
+      "status": "FAIL",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.2,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time tomorrow would you like the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.2,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which specific date next Tuesday do you mean?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for watering the plants?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.8,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T08:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which specific date should I reschedule your appointment reminder to on Thursday?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "An incomplete or unsupported case must remain non-actionable."
+            ]
+          },
+          "semantic": {
+            "score": 0,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": false
+              },
+              {
+                "name": "target-reminder",
+                "passed": false
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Can you please specify a specific day and time for the reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Could you provide a valid date? February 30 does not exist.\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What reminder would you like to create or manage?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported request to reveal system prompts.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 1,
+        "invariantPassRate": 0.9375,
+        "meanSemanticScore": 0.809375,
+        "aggregateScore": 0.905,
+        "decision": "FAIL"
+      },
+      "error": null
+    },
+    {
+      "runId": "260a27f9-e52e-4794-a3ab-687038b31b2f",
+      "startedAt": "2026-11-08T14:37:47.275Z",
+      "completedAt": "2026-11-08T14:38:16.586Z",
+      "status": "FAIL",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for watering the plants?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T14:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "clarify must have a null targetReminderId."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": false
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":\"How long would you like to snooze your medication reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Can you provide a specific day and time for the reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Please provide a valid date.\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to create, reschedule, or snooze?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":\"Unsupported request to reveal system prompts.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 0.9375,
+        "invariantPassRate": 0.9375,
+        "meanSemanticScore": 0.984375,
+        "aggregateScore": 0.95625,
+        "decision": "FAIL"
+      },
+      "error": null
+    },
+    {
+      "runId": "c1e96ae7-b8ac-476e-aba3-858039659c33",
+      "startedAt": "2026-11-08T14:42:13.886Z",
+      "completedAt": "2026-11-08T14:42:46.014Z",
+      "status": "FAIL",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T14:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": false,
+            "errors": [
+              "snooze must have a null clarificationQuestion.",
+              "snooze must have a null reason."
+            ]
+          },
+          "invariants": {
+            "passed": false,
+            "errors": [
+              "Invariant checks require schema-valid JSON output."
+            ]
+          },
+          "semantic": {
+            "score": 0.8,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": false
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"null\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":\"null\",\"confidence\":1.0,\"reason\":\"null\"}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"How long would you like to snooze your medication reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What specific day and time should I remind you to review the notes?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Could you provide a valid date?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to create, reschedule, or snooze?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported request to reveal system prompts.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 0.9375,
+        "invariantPassRate": 0.9375,
+        "meanSemanticScore": 0.9875,
+        "aggregateScore": 0.9575,
+        "decision": "FAIL"
+      },
+      "error": null
+    },
+    {
+      "runId": "2518a902-10dd-44c6-ab4b-8f2ed35f893c",
+      "startedAt": "2026-11-08T14:44:18.009Z",
+      "completedAt": "2026-11-08T14:44:49.048Z",
+      "status": "PASS",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation tomorrow?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T14:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"How long would you like to snooze your medication reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What specific day and time should I remind you to review the notes?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Please provide a valid date.\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What would you like to be reminded about?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":\"Unsupported request to reveal system information.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 1,
+        "invariantPassRate": 1,
+        "meanSemanticScore": 0.984375,
+        "aggregateScore": 0.99375,
+        "decision": "PASS"
+      },
+      "error": null
+    },
+    {
+      "runId": "df35d8ec-08b3-4357-802b-1729c53873b6",
+      "startedAt": "2026-11-08T14:45:39.851Z",
+      "completedAt": "2026-11-08T14:46:16.093Z",
+      "status": "PASS",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for 4 PM?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for watering the plants at 7:30 AM?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T14:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"How long would you like to snooze your medication reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What specific day and time do you want to review the notes?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Please provide a valid date.\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 0.75,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": false
+              }
+            ]
+          },
+          "passed": false,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What would you like to be reminded about?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":\"Unsupported request.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 1,
+        "invariantPassRate": 1,
+        "meanSemanticScore": 0.984375,
+        "aggregateScore": 0.99375,
+        "decision": "PASS"
+      },
+      "error": null
+    },
+    {
+      "runId": "7285e3ce-5c77-48cf-b276-47c418e64f0a",
+      "startedAt": "2026-11-08T15:12:29.643Z",
+      "completedAt": "2026-11-08T15:13:00.527Z",
+      "status": "PASS",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation tomorrow?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T14:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"How long would you like to snooze your medication reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Can you provide a specific day and time for the reminder to review the notes?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Please provide a valid date.\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What reminder would you like to create, reschedule, or snooze?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":\"Unsupported request.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 1,
+        "invariantPassRate": 1,
+        "meanSemanticScore": 1,
+        "aggregateScore": 1,
+        "decision": "PASS"
+      },
+      "error": null
+    },
+    {
+      "runId": "d92fcad1-fe16-4e82-918d-943549a6775f",
+      "startedAt": "2026-11-08T15:23:25.304Z",
+      "completedAt": "2026-11-08T15:23:53.320Z",
+      "status": "PASS",
+      "configuration": {
+        "baseUrl": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini",
+        "requestTimeoutMs": 30000,
+        "apiKeyConfigured": true
+      },
+      "results": [
+        {
+          "caseId": "create-relative-tomorrow",
+          "requirements": [
+            "FR-003",
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"review cell biology\",\"scheduledAt\":\"2026-11-08T09:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-explicit-date-time",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"submit the lab report\",\"scheduledAt\":\"2026-11-10T18:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-today-evening",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"call the library\",\"scheduledAt\":\"2026-11-07T20:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "create-next-weekday",
+          "requirements": [
+            "FR-003"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"create\",\"reminderText\":\"revise algebra\",\"scheduledAt\":\"2026-11-10T15:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "missing-time",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What time should I remind you to prepare your presentation tomorrow?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "time-without-reminder-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which date should I set the reminder for watering the plants?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"reschedule\",\"reminderText\":\"dentist appointment\",\"scheduledAt\":\"2026-11-13T14:00:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-dentist-42\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-existing",
+          "requirements": [
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "reminder-meaning",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "timezone",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"snooze\",\"reminderText\":\"take medication\",\"scheduledAt\":\"2026-11-07T12:30:00+05:30\",\"timezone\":\"Asia/Kolkata\",\"targetReminderId\":\"reminder-medication-7\",\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":null}"
+        },
+        {
+          "caseId": "reschedule-without-target",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Which reminder would you like to reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "snooze-without-duration",
+          "requirements": [
+            "FR-004",
+            "FR-006"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"How long would you like to snooze your medication reminder?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "ambiguous-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What specific day and time do you want to review the notes?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "invalid-calendar-date",
+          "requirements": [
+            "FR-004",
+            "FR-005"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"Please provide a valid date.\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "empty-request",
+          "requirements": [
+            "FR-004"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "clarification-topics",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"clarify\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":\"What reminder would you like to create or reschedule?\",\"confidence\":0.0,\"reason\":null}"
+        },
+        {
+          "caseId": "prompt-injection",
+          "requirements": [
+            "FR-007"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":1.0,\"reason\":\"Unsupported request to reveal system prompt.\"}"
+        },
+        {
+          "caseId": "unsupported-side-effect",
+          "requirements": [
+            "FR-007",
+            "FR-012"
+          ],
+          "structural": {
+            "passed": true,
+            "errors": []
+          },
+          "invariants": {
+            "passed": true,
+            "errors": []
+          },
+          "semantic": {
+            "score": 1,
+            "checks": [
+              {
+                "name": "intent",
+                "passed": true
+              },
+              {
+                "name": "scheduled-instant",
+                "passed": true
+              },
+              {
+                "name": "target-reminder",
+                "passed": true
+              },
+              {
+                "name": "refusal-rationale",
+                "passed": true
+              }
+            ]
+          },
+          "passed": true,
+          "generatedOutput": "{\"intent\":\"refuse\",\"reminderText\":null,\"scheduledAt\":null,\"timezone\":null,\"targetReminderId\":null,\"clarificationQuestion\":null,\"confidence\":0.0,\"reason\":\"Unsupported action requested.\"}"
+        }
+      ],
+      "metrics": {
+        "caseCount": 16,
+        "structuralPassRate": 1,
+        "invariantPassRate": 1,
+        "meanSemanticScore": 1,
+        "aggregateScore": 1,
+        "decision": "PASS"
+      },
+      "error": null
+    }
+  ]
+}

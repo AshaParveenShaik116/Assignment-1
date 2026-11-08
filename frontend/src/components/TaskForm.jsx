@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 
 const EMPTY_TASK = {
+  subject: '',
   title: '',
   description: '',
+  importantNotes: '',
   priority: 'medium',
   status: 'pending',
+  studyDate: '',
   dueDate: '',
 };
 
@@ -16,10 +19,13 @@ export default function TaskForm({ onCreate, onSave, initialTask, onCancel }) {
   useEffect(() => {
     if (initialTask) {
       setValues({
+        subject: initialTask.subject ?? 'General',
         title: initialTask.title,
         description: initialTask.description ?? '',
+        importantNotes: initialTask.importantNotes ?? '',
         priority: initialTask.priority,
         status: initialTask.status,
+        studyDate: initialTask.studyDate ?? '',
         dueDate: initialTask.dueDate ?? '',
       });
     }
@@ -33,13 +39,15 @@ export default function TaskForm({ onCreate, onSave, initialTask, onCancel }) {
     event.preventDefault();
     setError('');
     const payload = {
+      subject: values.subject.trim(),
       title: values.title.trim(),
       description: values.description,
+      importantNotes: values.importantNotes,
       priority: values.priority,
       status: values.status,
     };
-    if (editing) payload.dueDate = values.dueDate || null;
-    else if (values.dueDate) payload.dueDate = values.dueDate;
+    if (editing || values.studyDate) payload.studyDate = values.studyDate || null;
+    if (editing || values.dueDate) payload.dueDate = values.dueDate || null;
 
     try {
       if (editing) await onSave(initialTask.id, payload);
@@ -54,22 +62,41 @@ export default function TaskForm({ onCreate, onSave, initialTask, onCancel }) {
   return (
     <form className={`task-form ${editing ? 'task-form-editing' : ''}`} onSubmit={submit}>
       <label className="form-field form-title-field">
-        Title
+        Study subject
+        <input
+          required
+          maxLength={100}
+          placeholder="e.g. SDLC"
+          value={values.subject}
+          onChange={(event) => update('subject', event.target.value)}
+        />
+      </label>
+      <label className="form-field form-title-field">
+        Study goal
         <input
           required
           maxLength={200}
-          placeholder="What needs to get done?"
+          placeholder="e.g. Revise class 07"
           value={values.title}
           onChange={(event) => update('title', event.target.value)}
         />
       </label>
       <label className="form-field">
-        Description
+        Topics or materials
         <textarea
           maxLength={2000}
-          placeholder="Add a few details..."
+          placeholder="Chapters, topics, or resources to cover"
           value={values.description}
           onChange={(event) => update('description', event.target.value)}
+        />
+      </label>
+      <label className="form-field">
+        Important notes
+        <textarea
+          maxLength={2000}
+          placeholder="Exam reminders, key details, or anything to remember"
+          value={values.importantNotes}
+          onChange={(event) => update('importantNotes', event.target.value)}
         />
       </label>
       <label className="form-field">
@@ -89,7 +116,15 @@ export default function TaskForm({ onCreate, onSave, initialTask, onCancel }) {
         </select>
       </label>
       <label className="form-field">
-        Due date
+        Study date
+        <input
+          type="date"
+          value={values.studyDate}
+          onChange={(event) => update('studyDate', event.target.value)}
+        />
+      </label>
+      <label className="form-field">
+        Exam / finish by
         <input
           type="date"
           value={values.dueDate}
@@ -98,7 +133,7 @@ export default function TaskForm({ onCreate, onSave, initialTask, onCancel }) {
       </label>
       {error && <p role="alert">{error}</p>}
       <div className="form-actions">
-        <button className="primary-button" type="submit">{editing ? 'Save task' : 'Add task'}<span aria-hidden="true">↗</span></button>
+        <button className="primary-button" type="submit">{editing ? 'Save plan' : 'Add study plan'}<span aria-hidden="true">↗</span></button>
         {editing && <button className="text-button" type="button" onClick={onCancel}>Cancel</button>}
       </div>
     </form>

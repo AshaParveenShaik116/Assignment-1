@@ -1,4 +1,4 @@
-# Research: Smart Todo & Task CLI/API
+# Research: Student Exam Preparation Planner
 
 ## Decision: Split the application into a frontend and a backend service
 
@@ -24,9 +24,9 @@
 - Plain HTML/JS frontend: would not meet the stated frontend requirement and would lower testability and maintainability.
 - Next.js: more opinionated and heavier than needed for a small task app.
 
-## Decision: Use a shared task domain contract between UI and API
+## Decision: Use a shared study-plan domain contract between UI and API
 
-**Rationale**: The specification emphasizes equivalent behavior between CLI and API access points. A documented task model, validation rules, and error semantics keep the UI and API consistent without coupling them tightly.
+**Rationale**: The planner needs equivalent behavior across the browser, CLI, and API. A documented study-plan model, validation rules, and error semantics keep the interfaces consistent without coupling them tightly.
 
 **Alternatives considered**:
 - Separate ad hoc validation in UI and API: creates drift and inconsistent behavior.
@@ -42,7 +42,7 @@
 
 ## Resolved unknowns
 
-- Task ownership is personal, not multi-user auth v1.
-- Task validation is explicit and server-centric, with UI validation as a UX layer.
+- Study-plan ownership is personal, not multi-user auth v1.
+- Study-plan validation is explicit and server-centric, with UI validation as a UX layer.
 - Error handling is consistent: 400 for validation, 404 for missing task, 500 for unexpected server failures.
-- Search and filter behavior is text-based and status/priority-driven, matching the approved specification.
+- Search and filtering include subject, study date, target date, status, and important notes.

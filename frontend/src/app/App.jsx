@@ -5,9 +5,10 @@ import TaskList from '../components/TaskList.jsx';
 import useTasks from '../hooks/useTasks.js';
 
 const VIEWS = [
-  { id: 'all', label: 'All tasks', icon: 'grid' },
-  { id: 'today', label: 'Today', icon: 'sun' },
-  { id: 'upcoming', label: 'Upcoming', icon: 'calendar' },
+  { id: 'planner', label: 'Study planner', icon: 'calendar' },
+  { id: 'all', label: 'All study plans', icon: 'grid' },
+  { id: 'today', label: "Today's study", icon: 'sun' },
+  { id: 'upcoming', label: 'Upcoming study', icon: 'calendar' },
   { id: 'in_progress', label: 'In progress', icon: 'progress' },
   { id: 'completed', label: 'Completed', icon: 'check' },
 ];
@@ -47,11 +48,16 @@ export default function App() {
   const currentView = VIEWS.find((view) => view.id === activeView);
 
   function selectView(view) {
+    if (view === 'planner') {
+      setActiveView(view);
+      return;
+    }
+
     const today = localDateString();
     const nextFilters = {
       all: {},
-      today: { dueAfter: today, dueBefore: today },
-      upcoming: { dueAfter: today },
+      today: { studyAfter: today, studyBefore: today },
+      upcoming: { studyAfter: today },
       in_progress: { status: 'in_progress' },
       completed: { status: 'completed' },
     }[view];
@@ -62,9 +68,9 @@ export default function App() {
   return (
     <div className="app-shell">
       <aside className="sidebar">
-        <a className="brand" href="#main-content" aria-label="Smart Todo home">
+        <a className="brand" href="#main-content" aria-label="Exam Prep Planner home">
           <span className="brand-mark"><span /></span>
-          <span>Smart Todo</span>
+          <span>Exam Prep</span>
         </a>
         <div className="workspace-label">YOUR WORKSPACE</div>
         <div className="workspace-switch">
@@ -72,7 +78,7 @@ export default function App() {
           <span className="workspace-name"><strong>Personal</strong><small>My workspace</small></span>
           <span className="workspace-caret">⌄</span>
         </div>
-        <nav className="side-nav" aria-label="Task views">
+        <nav className="side-nav" aria-label="Study plan views">
           <p className="nav-heading">MENU</p>
           {VIEWS.map((view) => (
             <button
@@ -110,89 +116,88 @@ export default function App() {
         </header>
 
         <div className="page-content">
-          <section className="welcome">
-            <div>
-              <p className="eyebrow">A FRESH PAGE, A CLEAR MIND</p>
-              <h1>Smart Todo</h1>
-              <p className="welcome-copy">A little progress each day adds up to big results.</p>
-            </div>
-            <div className="welcome-art" aria-hidden="true">
-              <span className="art-sun" />
-              <span className="art-hill art-hill-back" />
-              <span className="art-hill art-hill-front" />
-              <span className="art-star">✦</span>
-            </div>
-          </section>
-
-          <section className="stats-grid" aria-label="Task summary">
-            <article className="stat-card stat-total">
-              <span className="stat-icon"><Icon name="grid" /></span>
-              <span className="stat-label">Tasks in view</span>
-              <strong>{loading ? '—' : tasks.length}</strong>
-              <span className="stat-foot">Keep your momentum going</span>
-            </article>
-            <article className="stat-card stat-progress">
-              <span className="stat-icon"><Icon name="progress" /></span>
-              <span className="stat-label">In progress</span>
-              <strong>{loading ? '—' : counts.in_progress ?? 0}</strong>
-              <span className="stat-foot">One thing at a time</span>
-            </article>
-            <article className="stat-card stat-done">
-              <span className="stat-icon"><Icon name="check" /></span>
-              <span className="stat-label">Completed</span>
-              <strong>{loading ? '—' : counts.completed ?? 0}</strong>
-              <span className="stat-foot">Look how far you’ve come</span>
-            </article>
-          </section>
-
-          <div className="content-grid">
-            <section className="tasks-panel" aria-labelledby="task-list-heading">
-              <div className="section-heading">
+          {activeView !== 'planner' && (
+            <>
+              <section className="welcome">
                 <div>
-                  <p className="eyebrow">YOUR DAY, YOUR PACE</p>
-                  <h2 id="task-list-heading">{currentView?.label ?? 'Your tasks'}<span className="heading-count">{loading ? '' : tasks.length}</span></h2>
+                  <p className="eyebrow">YOUR EXAMS, ONE STEP AT A TIME</p>
+                  <h1>Exam Prep Planner</h1>
+                  <p className="welcome-copy">Build a steady study routine and feel ready for exam day.</p>
                 </div>
-                <span className="list-date">{formattedDate}</span>
-              </div>
-              <Filters
-                value={filters}
-                onChange={(nextFilters) => {
-                  setActiveView('all');
-                  setFilters(nextFilters);
-                }}
-              />
-              <TaskList
-                tasks={tasks}
-                loading={loading}
-                error={error}
-                onUpdate={updateTask}
-                onStatusChange={updateStatus}
-                onArchive={archiveTask}
-              />
-            </section>
+                <div className="welcome-art" aria-hidden="true">
+                  <span className="art-sun" />
+                  <span className="art-hill art-hill-back" />
+                  <span className="art-hill art-hill-front" />
+                  <span className="art-star">✦</span>
+                </div>
+              </section>
 
-            <aside className="right-rail">
-              <section className="quick-add-card" aria-labelledby="create-task-heading">
-                <div className="quick-add-heading">
-                  <span className="quick-add-icon">+</span>
-                  <div>
-                    <p className="eyebrow">MAKE IT HAPPEN</p>
-                    <h2 id="create-task-heading">Quick add</h2>
-                  </div>
+              <section className="stats-grid" aria-label="Study plan summary">
+                <article className="stat-card stat-total">
+                  <span className="stat-icon"><Icon name="grid" /></span>
+                  <span className="stat-label">Plans in view</span>
+                  <strong>{loading ? '—' : tasks.length}</strong>
+                  <span className="stat-foot">Your subjects, organized</span>
+                </article>
+                <article className="stat-card stat-progress">
+                  <span className="stat-icon"><Icon name="progress" /></span>
+                  <span className="stat-label">In progress</span>
+                  <strong>{loading ? '—' : counts.in_progress ?? 0}</strong>
+                  <span className="stat-foot">Keep building your routine</span>
+                </article>
+                <article className="stat-card stat-done">
+                  <span className="stat-icon"><Icon name="check" /></span>
+                  <span className="stat-label">Completed</span>
+                  <strong>{loading ? '—' : counts.completed ?? 0}</strong>
+                  <span className="stat-foot">Look how far you’ve come</span>
+                </article>
+              </section>
+            </>
+          )}
+
+          <div className={`content-grid ${activeView === 'planner' ? 'planner-grid' : 'list-grid'}`}>
+            {activeView === 'planner' ? (
+              <section className="study-planner-page" aria-labelledby="study-planner-heading">
+                <div className="planner-intro">
+                  <span className="planner-icon"><Icon name="calendar" /></span>
+                  <p className="eyebrow">MAKE A PLAN THAT WORKS FOR YOU</p>
+                  <h2 id="study-planner-heading">Plan your study session</h2>
+                  <p>Choose a subject, decide what to cover, and set dates to stay on track for your exam.</p>
                 </div>
-                <p className="quick-add-copy">Get it out of your head and onto your list.</p>
-                <TaskForm onCreate={createTask} />
+                <div className="planner-form-card">
+                  <TaskForm onCreate={createTask} />
+                </div>
               </section>
-              <section className="focus-card">
-                <span className="focus-icon">✦</span>
-                <p className="eyebrow">A MOMENT TO FOCUS</p>
-                <h3>Progress, not perfection.</h3>
-                <p>Choose one task. Give it your attention. That’s enough for now.</p>
-                <div className="focus-decoration" aria-hidden="true"><span /><span /><span /></div>
+            ) : (
+              <section className="tasks-panel" aria-labelledby="task-list-heading">
+                <div className="section-heading">
+                  <div>
+                    <p className="eyebrow">YOUR STUDY ROUTINE</p>
+                    <h2 id="task-list-heading">{currentView?.label ?? 'Your study plans'}<span className="heading-count">{loading ? '' : tasks.length}</span></h2>
+                  </div>
+                  <span className="list-date">{formattedDate}</span>
+                </div>
+                <Filters
+                  value={filters}
+                  onChange={(nextFilters) => {
+                    setActiveView('all');
+                    setFilters(nextFilters);
+                  }}
+                />
+                <TaskList
+                  tasks={tasks}
+                  loading={loading}
+                  error={error}
+                  onUpdate={updateTask}
+                  onStatusChange={updateStatus}
+                  onArchive={archiveTask}
+                />
               </section>
-            </aside>
+            )}
           </div>
-          <footer className="page-footer">Made for thoughtful days <span>✳</span></footer>
+          {activeView !== 'planner' && (
+            <footer className="page-footer">Made for focused study <span>✳</span></footer>
+          )}
         </div>
       </main>
     </div>

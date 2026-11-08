@@ -1,0 +1,1392 @@
+{
+  "runs": [
+    {
+      "startedAt": "2026-11-07T16:07:41.215Z",
+      "completedAt": "2026-11-07T16:07:45.102Z",
+      "result": "FAIL",
+      "checks": [
+        {
+          "id": "syntax:.harness\\run.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\run.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:.harness\\security-check.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\app.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\app.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\apiClient.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\apiClient.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\index.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\index.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\taskCommands.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\taskCommands.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\database.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\database.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\environment.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\environment.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\controllers\\taskController.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\controllers\\taskController.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\errorHandler.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\errorHandler.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\notFound.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\notFound.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\models\\Task.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\models\\Task.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\routes\\taskRoutes.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\routes\\taskRoutes.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\server.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\server.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\services\\taskService.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\services\\taskService.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\utils\\errors.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\utils\\errors.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\api\\tasks.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\api\\tasks.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\cli\\taskCommands.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\cli\\taskCommands.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\app.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\app.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\database.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\database.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\environment.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\environment.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\testDb.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\testDb.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\integration\\clientParity.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\integration\\clientParity.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\setup\\testDb.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\setup\\testDb.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskModel.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskModel.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskService.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskService.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\vitest.config.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\vitest.config.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "security-static",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "PASS: 5 source security rules checked across backend/src, frontend/src.\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "backend-tests",
+          "command": "npm.cmd --prefix backend test",
+          "cwd": ".",
+          "exitCode": null,
+          "error": "spawnSync npm.cmd EINVAL",
+          "stdout": "",
+          "stderr": "",
+          "passed": false
+        },
+        {
+          "id": "frontend-tests",
+          "command": "npm.cmd --prefix frontend test",
+          "cwd": ".",
+          "exitCode": null,
+          "error": "spawnSync npm.cmd EINVAL",
+          "stdout": "",
+          "stderr": "",
+          "passed": false
+        },
+        {
+          "id": "frontend-production-build",
+          "command": "npm.cmd --prefix frontend run build",
+          "cwd": ".",
+          "exitCode": null,
+          "error": "spawnSync npm.cmd EINVAL",
+          "stdout": "",
+          "stderr": "",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-11-07T16:09:27.574Z",
+      "completedAt": "2026-11-07T16:10:11.403Z",
+      "result": "FAIL",
+      "checks": [
+        {
+          "id": "syntax:.harness\\run.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\run.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:.harness\\security-check.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\app.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\app.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\apiClient.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\apiClient.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\index.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\index.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\taskCommands.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\taskCommands.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\database.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\database.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\environment.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\environment.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\controllers\\taskController.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\controllers\\taskController.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\errorHandler.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\errorHandler.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\notFound.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\notFound.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\models\\Task.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\models\\Task.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\routes\\taskRoutes.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\routes\\taskRoutes.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\server.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\server.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\services\\taskService.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\services\\taskService.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\utils\\errors.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\utils\\errors.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\api\\tasks.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\api\\tasks.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\cli\\taskCommands.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\cli\\taskCommands.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\app.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\app.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\database.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\database.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\environment.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\environment.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\testDb.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\testDb.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\integration\\clientParity.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\integration\\clientParity.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\setup\\testDb.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\setup\\testDb.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskModel.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskModel.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskService.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskService.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\vitest.config.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\vitest.config.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "security-static",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "PASS: 5 source security rules checked across backend/src, frontend/src.\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "backend-tests",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\node_modules\\vitest\\vitest.mjs run",
+          "cwd": "backend",
+          "exitCode": 1,
+          "error": null,
+          "stdout": "\n RUN  v4.1.12 C:/Users/askva/Desktop/AI-SDLC/Assignment-1/backend\n\n ❯ tests/api/tasks.test.js (9 tests | 1 failed) 5695ms\n     × creates and reads a task using the OpenAPI contract shape 571ms\n\n Test Files  1 failed | 8 passed (9)\n      Tests  1 failed | 35 passed (36)\n   Start at  21:39:32\n   Duration  19.80s (transform 1.74s, setup 0ms, import 60.06s, tests 23.51s, environment 6ms)\n\n",
+          "stderr": "\n⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯\n\n FAIL  tests/api/tasks.test.js > Task API > creates and reads a task using the OpenAPI contract shape\nAssertionError: expected { …(11) } to match object { subject: 'Biology', …(6) }\n(4 matching properties omitted from actual)\n\n- Expected\n+ Received\n\n  {\n    \"dueDate\": \"2026-11-10\",\n-   \"importantNotes\": \"Review the labeled diagram\",\n+   \"importantNotes\": \"Review the assignment\",\n    \"priority\": \"medium\",\n    \"status\": \"pending\",\n    \"studyDate\": \"2026-11-08\",\n-   \"subject\": \"Biology\",\n-   \"title\": \"Revise cells\",\n+   \"subject\": \"AI SDLC\",\n+   \"title\": \"Tokenize the dataset\",\n  }\n\n ❯ tests/api/tasks.test.js:24:25\n     22|\n     23|     expect(create.status).toBe(201);\n     24|     expect(create.body).toMatchObject({\n       |                         ^\n     25|       subject: 'Biology',\n     26|       title: 'Revise cells',\n\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯\n\n",
+          "passed": false
+        },
+        {
+          "id": "frontend-tests",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\frontend\\node_modules\\vitest\\vitest.mjs run",
+          "cwd": "frontend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\n RUN  v4.1.12 C:/Users/askva/Desktop/AI-SDLC/Assignment-1/frontend\n\n\n Test Files  4 passed (4)\n      Tests  8 passed (8)\n   Start at  21:39:55\n   Duration  11.93s (transform 1.65s, setup 12.87s, import 1.17s, tests 3.06s, environment 24.92s)\n\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "frontend-production-build",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\frontend\\node_modules\\vite\\bin\\vite.js build",
+          "cwd": "frontend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\u001b[36mvite v6.4.5 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m✓\u001b[39m 35 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.59 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.36 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[35massets/index-CPoNdLhg.css  \u001b[39m\u001b[1m\u001b[2m 21.34 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.54 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-CeuFxKbC.js   \u001b[39m\u001b[1m\u001b[2m241.86 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 74.60 kB\u001b[22m\n\u001b[32m✓ built in 2.59s\u001b[39m\n",
+          "stderr": "",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-11-07T16:11:23.864Z",
+      "completedAt": "2026-11-07T16:11:50.329Z",
+      "result": "PASS",
+      "checks": [
+        {
+          "id": "syntax:.harness\\run.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\run.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:.harness\\security-check.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\app.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\app.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\apiClient.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\apiClient.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\index.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\index.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\taskCommands.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\taskCommands.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\database.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\database.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\environment.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\environment.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\controllers\\taskController.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\controllers\\taskController.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\errorHandler.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\errorHandler.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\notFound.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\notFound.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\models\\Task.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\models\\Task.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\routes\\taskRoutes.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\routes\\taskRoutes.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\server.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\server.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\services\\taskService.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\services\\taskService.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\utils\\errors.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\utils\\errors.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\api\\tasks.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\api\\tasks.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\cli\\taskCommands.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\cli\\taskCommands.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\app.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\app.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\database.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\database.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\environment.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\environment.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\testDb.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\testDb.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\integration\\clientParity.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\integration\\clientParity.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\setup\\testDb.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\setup\\testDb.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskModel.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskModel.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskService.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskService.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\vitest.config.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\vitest.config.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "security-static",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "PASS: 5 source security rules checked across backend/src, frontend/src.\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "backend-tests",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\node_modules\\vitest\\vitest.mjs run",
+          "cwd": "backend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\n RUN  v4.1.12 C:/Users/askva/Desktop/AI-SDLC/Assignment-1/backend\n\n\n Test Files  9 passed (9)\n      Tests  36 passed (36)\n   Start at  21:41:28\n   Duration  11.98s (transform 565ms, setup 0ms, import 37.39s, tests 11.41s, environment 5ms)\n\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "frontend-tests",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\frontend\\node_modules\\vitest\\vitest.mjs run",
+          "cwd": "frontend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\n RUN  v4.1.12 C:/Users/askva/Desktop/AI-SDLC/Assignment-1/frontend\n\n\n Test Files  4 passed (4)\n      Tests  8 passed (8)\n   Start at  21:41:41\n   Duration  6.05s (transform 808ms, setup 4.43s, import 968ms, tests 1.93s, environment 12.78s)\n\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "frontend-production-build",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\frontend\\node_modules\\vite\\bin\\vite.js build",
+          "cwd": "frontend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\u001b[36mvite v6.4.5 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m✓\u001b[39m 35 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.59 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.36 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[35massets/index-CPoNdLhg.css  \u001b[39m\u001b[1m\u001b[2m 21.34 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.54 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-CeuFxKbC.js   \u001b[39m\u001b[1m\u001b[2m241.86 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 74.60 kB\u001b[22m\n\u001b[32m✓ built in 1.72s\u001b[39m\n",
+          "stderr": "",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-11-07T16:14:30.682Z",
+      "completedAt": "2026-11-07T16:15:04.730Z",
+      "result": "PASS",
+      "checks": [
+        {
+          "id": "syntax:.harness\\lint-check.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\lint-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:.harness\\run.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\run.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:.harness\\security-check.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\app.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\app.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\apiClient.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\apiClient.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\index.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\index.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\cli\\taskCommands.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\cli\\taskCommands.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\database.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\database.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\config\\environment.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\config\\environment.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\controllers\\taskController.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\controllers\\taskController.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\errorHandler.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\errorHandler.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\middleware\\notFound.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\middleware\\notFound.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\models\\Task.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\models\\Task.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\routes\\taskRoutes.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\routes\\taskRoutes.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\server.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\server.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\services\\taskService.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\services\\taskService.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\src\\utils\\errors.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\src\\utils\\errors.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\api\\tasks.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\api\\tasks.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\cli\\taskCommands.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\cli\\taskCommands.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\app.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\app.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\database.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\database.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\environment.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\environment.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\foundation\\testDb.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\foundation\\testDb.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\integration\\clientParity.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\integration\\clientParity.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\setup\\testDb.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\setup\\testDb.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskModel.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskModel.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\tests\\unit\\taskService.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\tests\\unit\\taskService.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:backend\\vitest.config.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\vitest.config.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\src\\agent.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\src\\agent.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\src\\contract.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\src\\contract.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\src\\evalRunner.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\src\\evalRunner.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\src\\evaluator.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\src\\evaluator.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\src\\modelClient.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\src\\modelClient.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\tests\\agent.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\tests\\agent.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\tests\\contract.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\tests\\contract.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\tests\\evaluator.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\tests\\evaluator.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\tests\\modelClient.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\tests\\modelClient.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax:Part-1B\\tests\\runner.test.js",
+          "command": "C:\\Program Files\\nodejs\\node.exe --check C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\Part-1B\\tests\\runner.test.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "syntax-lint",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\lint-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "PASS: lint rules checked backend/src, backend/tests, frontend/src, frontend/tests (trailing whitespace, var declarations, final newline).\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "security-static",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\.harness\\security-check.js",
+          "cwd": ".",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "PASS: 5 source security rules checked across backend/src, frontend/src.\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "backend-tests",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\backend\\node_modules\\vitest\\vitest.mjs run",
+          "cwd": "backend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\n RUN  v4.1.12 C:/Users/askva/Desktop/AI-SDLC/Assignment-1/backend\n\n\n Test Files  9 passed (9)\n      Tests  36 passed (36)\n   Start at  21:44:38\n   Duration  13.82s (transform 377ms, setup 0ms, import 43.89s, tests 12.24s, environment 8ms)\n\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "frontend-tests",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\frontend\\node_modules\\vitest\\vitest.mjs run",
+          "cwd": "frontend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\n RUN  v4.1.12 C:/Users/askva/Desktop/AI-SDLC/Assignment-1/frontend\n\n\n Test Files  4 passed (4)\n      Tests  8 passed (8)\n   Start at  21:44:54\n   Duration  7.27s (transform 1.66s, setup 5.53s, import 1.47s, tests 2.36s, environment 15.51s)\n\n",
+          "stderr": "",
+          "passed": true
+        },
+        {
+          "id": "frontend-production-build",
+          "command": "C:\\Program Files\\nodejs\\node.exe C:\\Users\\askva\\Desktop\\AI-SDLC\\Assignment-1\\frontend\\node_modules\\vite\\bin\\vite.js build",
+          "cwd": "frontend",
+          "exitCode": 0,
+          "error": null,
+          "stdout": "\u001b[36mvite v6.4.5 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m✓\u001b[39m 35 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.59 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.36 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[35massets/index-CPoNdLhg.css  \u001b[39m\u001b[1m\u001b[2m 21.34 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.54 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-CeuFxKbC.js   \u001b[39m\u001b[1m\u001b[2m241.86 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 74.60 kB\u001b[22m\n\u001b[32m✓ built in 1.83s\u001b[39m\n",
+          "stderr": "",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}
